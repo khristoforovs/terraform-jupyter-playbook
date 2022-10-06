@@ -1,0 +1,9 @@
+version: '3.7'
+services:
+  datascience-notebook:
+    container_name: jupyter
+    image: jupyter/minimal-notebook
+    ports:
+        - "80:8888"
+    command: "start-notebook.sh --ServerApp.password='<ENTER GENERATED PASSWORD HASH HERE>'"
+    restart: always
